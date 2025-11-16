@@ -1,1 +1,1 @@
-URL: https://kuriso-kuri.github.io/praktika-s19/
+URL: https://kuriso-kuri.github.io/praktika-s19/п

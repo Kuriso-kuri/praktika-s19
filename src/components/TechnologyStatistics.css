@@ -1,0 +1,175 @@
+.technology-statistics {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
+}
+
+.technology-statistics h3 {
+  margin: 0 0 20px 0;
+  color: #2c3e50;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card.total {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.stat-card.completed {
+  background: linear-gradient(135deg, #45b7d1 0%, #96c93d 100%);
+  color: white;
+}
+
+.stat-card.in-progress {
+  background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%);
+  color: white;
+}
+
+.stat-card.not-started {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+  color: white;
+}
+
+.stat-number {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.9em;
+  opacity: 0.9;
+  margin-bottom: 5px;
+}
+
+.stat-percentage {
+  font-size: 0.8em;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.detailed-progress {
+  margin-bottom: 25px;
+}
+
+.detailed-progress h4 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 1.1em;
+}
+
+.progress-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.progress-bar-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.progress-label {
+  min-width: 80px;
+  font-size: 0.9em;
+  color: #5a6c7d;
+  font-weight: 500;
+}
+
+.progress-bar-track {
+  flex: 1;
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.progress-bar-item.completed .progress-bar-fill {
+  background: linear-gradient(90deg, #45b7d1, #96c93d);
+}
+
+.progress-bar-item.in-progress .progress-bar-fill {
+  background: linear-gradient(90deg, #4ecdc4, #44a08d);
+}
+
+.progress-bar-item.not-started .progress-bar-fill {
+  background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
+}
+
+.progress-count {
+  min-width: 30px;
+  text-align: right;
+  font-size: 0.9em;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.insights {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+}
+
+.insights h4 {
+  margin: 0 0 15px 0;
+  color: #2c3e50;
+  font-size: 1.1em;
+}
+
+.insight-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  padding: 8px 0;
+  font-size: 0.95em;
+  color: #5a6c7d;
+}
+
+.insight-item:last-child {
+  margin-bottom: 0;
+}
+
+.insight-icon {
+  font-size: 1.2em;
+}
+
+.insight-item.achievement {
+  background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+  padding: 12px;
+  border-radius: 6px;
+  margin: 10px -10px 0 -10px;
+  color: #2d3436;
+  font-weight: 600;
+}
