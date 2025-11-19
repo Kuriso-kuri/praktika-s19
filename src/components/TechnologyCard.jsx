@@ -1,7 +1,12 @@
 import './TechnologyCard.css';
+import TechnologyNotes from './TechnologyNotes';
 
-function TechnologyCard({ id, title, description, status, onStatusChange }) {
-  const handleClick = () => {
+function TechnologyCard({ id, title, description, notes, status, onStatusChange, onNotesChange }) {
+  const handleCardClick = (e) => {
+    // Игнорируем клики по textarea и его родителям
+    if (e.target.tagName === 'TEXTAREA' || e.target.closest('textarea')) {
+      return;
+    }
     if (onStatusChange) {
       onStatusChange(id);
     }
@@ -9,8 +14,9 @@ function TechnologyCard({ id, title, description, status, onStatusChange }) {
 
   return (
     <div 
+      id={`tech-${id}`}
       className={`technology-card ${status}`}
-      onClick={handleClick}
+      onClick={handleCardClick}
     >
       <h3>{title}</h3>
       <p>{description}</p>
@@ -20,7 +26,12 @@ function TechnologyCard({ id, title, description, status, onStatusChange }) {
         {status === 'in-progress' && ' ⏳ В процессе'}
         {status === 'not-started' && ' ❌ Не начато'}
       </div>
-      <div className="click-hint">👆 Нажмите для смены статуса</div>
+      <TechnologyNotes 
+        notes={notes}
+        onNotesChange={onNotesChange}
+        techId={id}
+      />
+      <div className="click-hint">👆 Нажмите для смены статуса (кроме области заметок)</div>
     </div>
   );
 }
